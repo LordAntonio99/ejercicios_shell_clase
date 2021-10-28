@@ -1,28 +1,20 @@
 #!/bin/bash
-
-## Mostrar las variables de exportacion
-## Mostrar las variables de entorno
-
-### Si el contenido de DIR1 es un directorio, mostrar los archivos que contenga
-### Si el contenido de DIR2 es un directorio, mostrar los archivos que contenga
-
 echo "Las variables de exportacion son: "
 sleep 2
 export
-sleep 2
 echo "Las variables de entorno son: "
 sleep 2
 printenv
 sleep 2
-
-if [ -d "$1" ]
+DIR1PATH=$(find / -name "$1" -type d 2>/dev/null)
+DIR2PATH=$(find / -name "$2" -type d 2>/dev/null)
+if [ -d "$DIR1PATH" ]
 then
     echo "$1 es un directorio, y sus archivos son:"
-    ls "$1"
+    ls -l "$DIR1PATH"
 fi
-
-if [ -d "$2" ]
+if [ -d "$DIR2PATH" ]
 then
     echo "$2 es un directorio, y sus archivos son:"
-    ls "$2"
+    ls -l "$DIR2PATH"
 fi
