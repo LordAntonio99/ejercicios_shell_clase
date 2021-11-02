@@ -15,7 +15,7 @@ fi
 if [ -f "$ARCH" ]
 then
     clear
-    chmod o+x "$ARCH"
+    chmod u+x "$ARCH"
     echo "Los permisos de $ARCH se han actualizado correctamente"
 else
     clear
