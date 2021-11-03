@@ -6,7 +6,7 @@ do
     read -p "Introduce un nombre de usuario:"$'\n>> ' NOMBRE
     clear
 done
-PASSWD=$(grep "$NOMBRE" /etc/passwd)
+PASSWD=$(grep -w ^"$NOMBRE" /etc/passwd)
 if [ $? -ne 0 ]
 then
     echo "El usuario introducido no existe"
