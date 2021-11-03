@@ -1,8 +1,3 @@
-# Si $2 = Cuelgan
-## Bucle
-## ls /bin/*[t,e] >> nombre.txt
-## bucle cat nombre.txt
-
 #!/bin/bash
 if [ $# -ne 1 -a $# -ne 2 ]
 then
