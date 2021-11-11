@@ -1,4 +1,11 @@
 #!/bin/bash
+# @Author: Antonio Cintora
+# @Date:   2021-11-10 11:36:52
+# @Last Modified by:   Antonio Cintora
+# @Last Modified time: 2021-11-10 12:26:17
+#
+source "funciones.sh"
+ejecutando
 if [ $# -ne 1 -a $# -ne 2 ]
 then
     set "CANTIDAD" "CUELGAN"

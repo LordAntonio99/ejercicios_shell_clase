@@ -1,25 +1,22 @@
 #!/bin/bash
+# @Author: Antonio Cintora
+# @Date:   2021-11-10 11:36:52
+# @Last Modified by:   Antonio Cintora
+# @Last Modified time: 2021-11-10 12:41:51
+#g
 set "$DIR1" "$DIR2"
 clear
 env
 echo "La variable DIR1 es: $DIR1"
 echo "La variable DIR2 es: $DIR2"
 sleep 4
-DIR1HOME=$(ls /home/$DIR1 2>/dev/null)
-DIR1SUB=$(ls /home/*/$DIR1 2>/dev/null)
-DIR2HOME=$(ls /home/$DIR2 2>/dev/null)
-DIR2SUB=$(ls /home/*/$DIR2 2>/dev/null)
-if [ -e "$DIR1HOME" ]
+ARCHIVO1=$(find $HOME -name "$DIR1" 2>/dev/null)
+ARCHIVO2=$(find $HOME -name "$DIR2" 2>/dev/null)
+if [ -e "$ARCHIVO1" ]
 then
-    file "$DIR1HOME"
-elif [ -e "$DIR1SUB" ]
-then
-    file "$DIR1SUB"
+    file "$ARCHIVO1"
 fi
-if [ -e "$DIR2HOME" ]
+if [ -e "$ARCHIVO2" ]
 then
-    file "$DIR2HOME"
-elif [ -e "$DIR2SUB" ]
-then
-    file "$DIR2SUB"
+    file "$ARCHIVO2"
 fi

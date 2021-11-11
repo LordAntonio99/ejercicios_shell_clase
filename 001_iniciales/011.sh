@@ -1,8 +1,9 @@
 #!/bin/bash
-# read de un fichero
-# if no -e en $HOME o no -f
-# pedir otro nombre hasta bien
-# file del archivo y num intentos
+# @Author: Antonio Cintora
+# @Date:   2021-11-10 11:36:52
+# @Last Modified by:   Antonio Cintora
+# @Last Modified time: 2021-11-10 12:46:13
+#
 
 function comprobarfichero {
     ARCHIVO=$HOME/$1
@@ -22,7 +23,7 @@ do
     COMPROBACION=$(echo $?)
     INTENTO=$[$INTENTO+1]
 done
-
+ejecutando
 FICHERO="$HOME/$FICHERO"
 echo "Has realizado un total de $INTENTO intentos"
 file $FICHERO

@@ -1,11 +1,16 @@
 #!/bin/bash
+# @Author: Antonio Cintora
+# @Date:   2021-11-10 11:36:52
+# @Last Modified by:   Antonio Cintora
+# @Last Modified time: 2021-11-10 12:37:56
+#
 echo "Las variables de exportacion son: "
-sleep 2
+sleep 3
 export
 echo "Las variables de entorno son: "
-sleep 2
+sleep 3
 printenv
-sleep 2
+sleep 3
 DIR1PATH=$(find / -name "$1" -type d 2>/dev/null)
 DIR2PATH=$(find / -name "$2" -type d 2>/dev/null)
 if [ -d "$DIR1PATH" ]
