@@ -1,1 +1,0 @@
-/home/kali/Documents/ejercicios_shell_clase/001_iniciales/dir1
