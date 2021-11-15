@@ -31,12 +31,7 @@ VEZ=1
 VECES=3
 while [ $VEZ -le $VECES ]
 do
-    USUARIOS=$(who | cut -d " " -f 1)
-    echo "Los usuarios conectados son:" >> $FICH
-    echo "$USUARIOS" >> $FICH
-    echo "Hay un total de $(echo $USUARIOS | wc -l) usuarios conectados." >> $FICH
-    echo "Tus procesos activos son: " >> $FICH
-    echo $(ps -la -u $USER) >> $FICH
+    conexiones $FICH
     sleep 300
     VEZ=$[$VEZ+1]
 done
