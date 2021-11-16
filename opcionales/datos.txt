@@ -1,3 +1,5 @@
 PEPITO      5   5   5
 FULANITO    4   6   8
 ANTONIO     3   4   6
+ILDEFONSO   4   0   4
+VICTOR      6   7   5
